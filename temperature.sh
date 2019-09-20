@@ -14,5 +14,10 @@ echo -n "T in degrees Fahrenheit = " # a message to the user to enter a value in
 read f # read user's input
 c=$(echo "($f-32)*(5/9)" | bc -l) # convert from F to C
 printf "\nT = %f degrees Celsius\n\n" "$c" # print out the results in C
+# Molly added Kelvin
+#k is temperature in Kelvin
+echo "T in Kelvin"
+k=$(echo "$c+273" | bc -l)
+echo "$k"
 
 
